@@ -1,0 +1,46 @@
+:root{
+  --primary-color-red:#FF0000;
+  /* Fonts Size*/
+  --fs-small:16px;
+  --fs-medium:24px;
+  --fs-large:32px;
+  /* Weights */
+  --fw-bold:500;
+  --fw-bolder:700;
+  /* Gap Elements */
+  --gap-smallest:8px;
+  --gap-smaller:13px;
+  --gap-small:16px;
+  --gap:32px;
+  --gap-larger:40px;
+  /* Margin and Padding */
+  --pt-nav:24px;
+  --pl-nav:224px;
+  --pr-nav:160px;
+  --pb-nav:40px;
+  --p-section-horizontal:160px;
+  --pt-hero:321px;
+  --mt-section-vertical:72px;
+}
+
+
+*,*::after,*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Poppins", system-ui;
+  overflow-x: hidden;
+  width: 100vw;
+}
+button{
+  cursor: pointer;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
