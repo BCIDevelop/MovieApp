@@ -1,13 +1,14 @@
-import image from "../../assets/updated.png"
+
+import { Series } from "../../types/series.type"
 import "./updatedCard.css"
-const UpdatedCard = () => {
+const UpdatedCard = ({serie}:{serie:Series}) => {
   return (
     <div className="card-updated-container">
-        <img className="card-updated-container__image" src={image} alt="Image Updated" />
+        <img className="card-updated-container__image" src={`https://image.tmdb.org/t/p/original${serie.poster_path}`} alt="Image Updated" />
         <div className="card-updated-container__info updated-info">
-            <h3 className="updated-info__header">The Flash</h3>
-            <p className="updated-info__data">Series/S2/Ep 9</p>
-            <p className="updated-info__data">11/05/23</p>
+            <h3 className="updated-info__header">{serie.name}</h3>
+            <p className="updated-info__data">{`Series/S${serie.actualSeason}/Ep ${serie.actualEpisode}`}</p>
+            <p className="updated-info__data">{serie.release_date}</p>
         </div>
     </div>
   )

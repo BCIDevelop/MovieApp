@@ -9,9 +9,13 @@
     font-weight:var(--fw-bold);
 }
 .list-container-updated__lists{
+    
+    width: 945px;
+    overflow-x: hidden;
+}
+.updated-lists__container{
     display: flex;
     gap: var(--gap-larger);
-    width: 945px;
 }
 .updated-container__list-container{
     display: flex;

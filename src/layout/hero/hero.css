@@ -110,6 +110,7 @@
 .hero-container__carrousel{
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: var(--gap-small);
     margin-top: 32px;
@@ -120,4 +121,10 @@
     background-color: #fff;
     border-radius: 50%;
     cursor: pointer;
+}
+.carrousel-hero__element--active{
+    background-color: var(--primary-color-red);
+    border-radius: 12px;
+    width: 39px;
+    height: 13px;
 }
