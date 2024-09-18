@@ -2,16 +2,21 @@
     background-color:var(--primary-color-red) ;
     height: 40px;
     color: #fff;
+    padding: 8px;
+    border-radius: 10px;
 }
 .release-chip{
     height: 32px;
+    border-radius: 5px;
+    padding: 4px;
 }
+
 .white-chip{
     background-color: #fff;
     height: 44px;
+    padding: 10px;
+    border-radius: 20px;
 }
 .chip-container{
     text-align: center;
-    padding: 10px;
-    border-radius: 20px;
 }

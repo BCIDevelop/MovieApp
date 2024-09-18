@@ -1,0 +1,28 @@
+.recommended-header__container{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+
+}
+
+.recommended-header_filter{
+    display: flex;
+    gap: 24px;
+}
+.filter-container__element{
+    height: 100;
+    border: 2px solid;
+    border-color: var(--primary-color-red);
+    padding: 10px;
+    font-size: var(--fs-small);
+    color: #fff;
+    opacity: 50%;
+    background-color: transparent;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.filter-container__element--active{
+    background-color:var(--primary-color-red);
+    opacity: 100%;
+    font-weight: var(--fw-bolder);
+}

@@ -1,0 +1,90 @@
+.card-container{
+    display: flex;
+    height: 392px;
+    width: 256px;
+    flex-direction: column;
+}
+.card-trend{
+    height: 341px;
+    width: 352px;
+}
+/* figure */
+
+.card-container__figure{
+    padding: 8px 11.5px 0px 16px;
+    position: relative;
+    width: 100%;
+    height: 344px;
+}
+.figure-card-trending{
+    height: 293px;
+}
+
+/* Data movie */
+.card-container__info-container{
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+.movie-info-container__element{
+    display: flex;
+    gap: var(--gap-smallest);
+}
+.movie-info-container__element{
+    color: #fff;
+}
+.figure-card-trending__image{
+    position: absolute;
+    z-index: 2;
+    width: 59px;
+    height: 59px;
+    left: calc(50% - 29.5px);
+    top: calc(50% - 29.5px);
+}
+.figure-card__image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+.card-container__bottom{
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
+    align-items: center;
+}
+.bottom-card__text{
+    color: #fff;
+    font-size: var(--fs-small);
+}
+.bottom-card__trending{
+    font-size: var(--fs-medium);
+}
+
+.bottom-card__chips{
+    display: flex;
+    gap: 13px;
+
+}
+.chips-container__timestamp{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border: 1px solid;
+    border-color: var(--primary-color-red);
+    border-radius: 5px;
+    padding: 0 4px;
+}
+.timestamp-container__image{
+    width: 13.3px;
+    height: 13.3px;
+}
+.timestamp-container__text{
+    color: #fff;
+    font-size: var(--fs-small);
+    font-weight: var(--fw-bold);
+}

@@ -1,0 +1,7 @@
+.release-container{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-medium);
+    width: 1120px;
+    height: 458px;
+}

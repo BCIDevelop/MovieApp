@@ -1,0 +1,29 @@
+.card-updated-container{
+    height: 100%;
+    width: 206px;
+    display: flex;
+}
+.card-updated-container__image{
+    height: 100%;
+    width: 66px;
+}
+
+.card-updated-container__info{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-left: 24px;
+    padding-top: 11.5px;
+}
+.updated-info__header,.updated-info__data{
+    color: #fff;
+    height: 24px;
+    
+}
+.updated-info__header{
+    font-size: var(--fs-small);
+    font-weight: var(--fw-bold);
+}
+.updated-info__data{
+    font-weight: 400;
+}

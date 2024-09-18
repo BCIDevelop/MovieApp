@@ -1,0 +1,7 @@
+.home-container-main{
+    background-color: var(--secondary-color-black);
+    padding: var(--pt-home) 0px var(--pb-home) var(--p-section-horizontal);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-section);
+}

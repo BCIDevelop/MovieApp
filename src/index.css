@@ -1,5 +1,6 @@
 :root{
   --primary-color-red:#FF0000;
+  --secondary-color-black:black;
   /* Fonts Size*/
   --fs-small:16px;
   --fs-medium:24px;
@@ -11,8 +12,10 @@
   --gap-smallest:8px;
   --gap-smaller:13px;
   --gap-small:16px;
+  --gap-medium:24px;
   --gap:32px;
   --gap-larger:40px;
+  --gap-section:72px;
   /* Margin and Padding */
   --pt-nav:24px;
   --pl-nav:224px;
@@ -21,6 +24,8 @@
   --p-section-horizontal:160px;
   --pt-hero:321px;
   --mt-section-vertical:72px;
+  --pt-home:72px;
+  --pb-home:258px;
 }
 
 
