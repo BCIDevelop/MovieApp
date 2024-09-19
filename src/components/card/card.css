@@ -59,15 +59,18 @@
 }
 .bottom-card__text{
     color: #fff;
-    font-size: var(--fs-small);
+    font-size: 12px;
+    width: 118px;
 }
 .bottom-card__trending{
     font-size: var(--fs-medium);
+    width: 130px;
 }
 
 .bottom-card__chips{
     display: flex;
     gap: 13px;
+    align-items: center;
 
 }
 .chips-container__timestamp{
@@ -85,6 +88,6 @@
 }
 .timestamp-container__text{
     color: #fff;
-    font-size: var(--fs-small);
+    font-size: 16px;
     font-weight: var(--fw-bold);
 }

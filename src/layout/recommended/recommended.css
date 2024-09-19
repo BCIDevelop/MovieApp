@@ -1,10 +1,14 @@
+.recommended{
+    width: 1153px !important;
+    height: 826px !important;
+}
+
 .recommended-header__container{
     display: flex;
     gap: 24px;
     align-items: center;
 
 }
-
 .recommended-header_filter{
     display: flex;
     gap: 24px;
@@ -25,4 +29,7 @@
     background-color:var(--primary-color-red);
     opacity: 100%;
     font-weight: var(--fw-bolder);
+}
+.recommended-list{
+    flex-wrap: wrap;
 }

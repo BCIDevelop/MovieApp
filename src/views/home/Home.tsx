@@ -9,7 +9,6 @@ const Home = () => {
     <>
         <Hero/>
         <main className="home-container-main">
-
         <Updated/>
         <Trending/>
         <Release type="Movies"/>
