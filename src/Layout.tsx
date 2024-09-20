@@ -1,14 +1,16 @@
+import { ReactNode } from "react"
 import Header from "./layout/header/Header"
-import Home from "./views/home/Home"
+import { useLocation } from "react-router-dom"
 
 
 
-const Layout = () => {
-  
+
+const Layout = ({ children }:{children:ReactNode}) => {
+  const location = useLocation()
   return (
     <>
-    <Header/>
-    <Home/>
+    {location.pathname!=='/login' &&location.pathname!=='/register' && <Header/>}
+    {children}
     </>
   )
 }

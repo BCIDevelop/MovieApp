@@ -1,6 +1,8 @@
 import bell from '../../assets/bell.svg'
 import search from '../../assets/search.svg'
+
 import  './header.css'
+import { Link } from 'react-router-dom'
 const Header = () => {
     function handleClick(e:React.MouseEvent<HTMLAnchorElement>){
         const anchors = document.querySelectorAll('.element__anchor')
@@ -17,7 +19,7 @@ const Header = () => {
     <header className="header">
       <nav className="header__nav nav">
         <ul className="nav__list lists">
-            <li className="lists__element element"> <a onClick={handleClick} className='element__anchor element__anchor--active' href="#">Home</a> </li>
+            <li className="lists__element element"> <Link onClick={handleClick} className='element__anchor element__anchor--active' to="/">Home</Link> </li>
             <li className="lists__element element"><a onClick={handleClick} className='element__anchor' href="#">Genre</a></li>
             <li className="lists__element element"><a onClick={handleClick} className='element__anchor' href="#">Country</a></li>
             <div className="lists__search search-input">
@@ -28,7 +30,7 @@ const Header = () => {
             <li className="lists__element element"><a onClick={handleClick} className='element__anchor' href="#">Movies</a></li>
             <li className="lists__element element"><a onClick={handleClick} className='element__anchor' href="#">Series</a></li>
             <li className="lists__element element"><a onClick={handleClick} className='element__anchor' href="#">Anination</a></li>
-            <li className="lists__element element"><a onClick={handleClick} className='element__anchor' href="#">Login/Signup</a></li>
+            <li className="lists__element element"><a onClick={handleClick} className='element__anchor' href="/login">Login/Signup</a></li>
             <img className='lists__bell' src={bell} alt="Notification bell" />
         </ul>
       </nav>
