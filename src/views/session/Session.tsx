@@ -36,7 +36,7 @@ const Session = () => {
     const password = sanitizeInput( inputs[1].value)
     const newPassword = sanitizeInput( inputs[2].value)
     if(password === newPassword){
-      addStorage('users',{email,password})
+      addStorage('users',{email,password,userId:crypto.randomUUID()})
       navigator('/login')
     }
   }
