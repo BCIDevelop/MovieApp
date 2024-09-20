@@ -11,7 +11,14 @@ export function addStorage(key:string, object:{[objectId:string]:string}):void {
         const newData = [...itemsParsed,object]
         localStorage.setItem(key, JSON.stringify(newData));  
     }
+    else{
+        localStorage.setItem(key, JSON.stringify([object]))
+    }
     
+}
+
+export function removeStorage(key:string){
+    localStorage.removeItem(key)
 }
 
 export function getStorage(key:string) {

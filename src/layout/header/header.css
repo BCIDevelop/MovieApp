@@ -56,3 +56,10 @@
     border: none;
     
 }
+.lists__element{
+    color: #fff;
+}
+.logout{
+    color: var(--primary-color-red);
+    cursor: pointer;
+}

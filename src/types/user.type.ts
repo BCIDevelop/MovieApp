@@ -3,6 +3,7 @@ export type User ={
     email:string;
 }
 export interface UserContextType {
-    user: User | null;
+    user: User | undefined;
     loginUser: ({ email, userId }: User) => void;
+    logOutUser: () => void;
 }

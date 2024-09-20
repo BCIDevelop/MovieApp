@@ -4,8 +4,8 @@ const Form = ({handleSubmit,text,inputs}:{handleSubmit:(e:React.MouseEvent<HTMLF
  
   return (
     <form onSubmit={(e:React.MouseEvent<HTMLFormElement>)=> handleSubmit(e)} className="form-container">
-        {inputs.map(element=>{
-          return <input className='form-container__input' type={element} placeholder={element} />
+        {inputs.map((element,index)=>{
+          return <input key={`input${element}${index}`} className='form-container__input' type={element} placeholder={element} />
         })}
         <button className='form-container__button' type="submit">{text}</button>
         {text ==="Sign In"

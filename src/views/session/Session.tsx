@@ -3,12 +3,14 @@ import './session.css'
 import Form from "../../components/form/Form"
 import logo from "../../assets/logo-transparent.png"
 import sanitizeInput from "../../utils/sanitizeData"
-import { addStorage, addStorageObject, getStorage } from "../../service/storage"
+import { addStorage, getStorage } from "../../service/storage"
+import useUser from "../../hooks/useUser"
 const Session = () => {
   const location = useLocation()
   const text = location.pathname ==="/login"  ? "Sign In" : "Sign Up"
   const inputsArray =location.pathname ==="/login"  ? ["email","password"] : ["email","password","password"]
   const navigator = useNavigate()
+  const {loginUser} = useUser()
   function handleClickSubmitLogin(e:React.MouseEvent<HTMLFormElement>){
     e.preventDefault()
     const inputs:NodeListOf<HTMLInputElement> = document.querySelectorAll<HTMLInputElement>(".form-container__input")
@@ -24,7 +26,7 @@ const Session = () => {
       console.log("TODO: handle error") 
       return 
     }
-    addStorageObject("user",{email})
+    loginUser({email,userId:userFinded.userId})
     navigator('/')
     
   }
@@ -32,10 +34,11 @@ const Session = () => {
   function handleClickSubmitRegister(e:React.MouseEvent<HTMLFormElement>){
     e.preventDefault()
     const inputs:NodeListOf<HTMLInputElement> = document.querySelectorAll<HTMLInputElement>(".form-container__input")
-    const email = sanitizeInput( inputs[0].value)
-    const password = sanitizeInput( inputs[1].value)
-    const newPassword = sanitizeInput( inputs[2].value)
-    if(password === newPassword){
+    const email = sanitizeInput( inputs[0].value).trim()
+    const password = sanitizeInput( inputs[1].value).trim()
+    const newPassword = sanitizeInput( inputs[2].value).trim()
+    
+    if(password !== "" && password === newPassword){
       addStorage('users',{email,password,userId:crypto.randomUUID()})
       navigator('/login')
     }

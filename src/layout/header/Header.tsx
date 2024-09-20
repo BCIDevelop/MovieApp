@@ -1,9 +1,11 @@
 import bell from '../../assets/bell.svg'
 import search from '../../assets/search.svg'
-
+import useUser from '../../hooks/useUser'
 import  './header.css'
 import { Link } from 'react-router-dom'
 const Header = () => {
+    const {user,logOutUser} = useUser()
+
     function handleClick(e:React.MouseEvent<HTMLAnchorElement>){
         const anchors = document.querySelectorAll('.element__anchor')
         anchors.forEach(element=>{
@@ -13,6 +15,9 @@ const Header = () => {
         })
         e.currentTarget.classList.add('element__anchor--active')
 
+    }
+    function handleLogOut(){
+      logOutUser()
     }
 
   return (
@@ -30,7 +35,13 @@ const Header = () => {
             <li className="lists__element element"><a onClick={handleClick} className='element__anchor' href="#">Movies</a></li>
             <li className="lists__element element"><a onClick={handleClick} className='element__anchor' href="#">Series</a></li>
             <li className="lists__element element"><a onClick={handleClick} className='element__anchor' href="#">Anination</a></li>
-            <li className="lists__element element"><a onClick={handleClick} className='element__anchor' href="/login">Login/Signup</a></li>
+            {user 
+            ? 
+            <>
+            <li className="lists__element element">{`Hola, ${user.email}`}</li>  
+            <li onClick={handleLogOut} className="lists__element logout">LogOut</li>   
+            </>
+            :<li className="lists__element element"><Link onClick={handleClick} className='element__anchor' to="/login">Login/Signup</Link></li>}
             <img className='lists__bell' src={bell} alt="Notification bell" />
         </ul>
       </nav>
