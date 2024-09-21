@@ -43,11 +43,14 @@ const Session = () => {
       navigator('/login')
     }
   }
+  function handleLogoClick(){
+    navigator('/')
+  }
   const handleFuntion =  location.pathname ==="/login"  ? handleClickSubmitLogin : handleClickSubmitRegister
 
   return (
     <div className="session-main-container">
-        <img className="session-main-container__logo" src={logo} alt="Logo" />
+        <img onClick={handleLogoClick} className="session-main-container__logo" src={logo} alt="Logo" />
         <div className="session-container"></div>
         <div className="session-container__main session-main">
                 <h1 className="session-main__header">{text}</h1>

@@ -1,8 +1,10 @@
 import { BrowserRouter,Route,Routes } from "react-router-dom"
 import Layout from "../Layout"
-import Home from "../views/home/Home"
-import Session from "../views/session/Session"
 import PublicGuard from "../guard/PublicGuard"
+import React from "react"
+
+const Home = React.lazy(() => import("../views/home/Home"));
+const Session = React.lazy(() => import("../views/session/Session"));
 
 const Router = () => {
   return (

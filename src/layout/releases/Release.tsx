@@ -30,7 +30,7 @@ const Release = ({type}:{type:string}) => {
           
           const urlDetail = type === "Movies"? `https://api.themoviedb.org/3/movie/${element.id}?language=en-US`: `https://api.themoviedb.org/3/tv/${element.id}?language=en-US`
           const movieDetail = await makeRequest(urlDetail)
-          const runtime = type === "Movies"? formatRunTime(movieDetail.runtime): `Season ${movieDetail.next_episode_to_air.season_number}`
+          const runtime = type === "Movies"? formatRunTime(movieDetail.runtime): `Season ${movieDetail.last_episode_to_air.season_number}`
           movieAdded.runtime = runtime
           movieAdded.genres = movieDetail.genres.slice(0,2)
           moviesMapped.push(movieAdded)
